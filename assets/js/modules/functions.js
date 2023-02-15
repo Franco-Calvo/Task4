@@ -137,8 +137,6 @@ export function detailCreate(event, container) {
   </div> `;
 }
 
-//  STATS
-
 export function createTable(assistanceUp, assistanceM, capacityM) {
   return `<table>
   <thead>
@@ -181,18 +179,20 @@ export function income(lists, noRepeat) {
 export function assistanceUp(lists, noRepeat) {
   let percentage=[]
   for(let i = 0; i < noRepeat.length; i++){
-      let estimateT = 0
+      let estimate = 0
       let capacityT = 0
       for(let list of lists){
           if (list.category === noRepeat[i]){
-             estimateT += list.estimate
-             capacityT += list.capacity
+              capacityT += (list.capacity)
+              estimate += (list.estimate)
           }
       }
-      percentage.push(estimateT / capacityT * 100 )
+      percentage.push(estimate / capacityT * 100)
   }
-  return percentage 
+  return percentage
 }
+
+
 export function assistancePast(lists, noRepeat){
   let percentage=[]
   for(let i = 0; i < noRepeat.length; i++){
