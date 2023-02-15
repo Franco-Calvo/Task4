@@ -112,7 +112,7 @@ export function detailCreate(event, container) {
   document.title = `${event.name} | Detail's`;
 
   container.innerHTML = ` <div class="details-img">
-  <img src="${event.image}" class="img-details">
+  <img src="${event.image}" class="img-details" alt="${event.name}">
   </div>
   <div class="container-information">
   <ul>
