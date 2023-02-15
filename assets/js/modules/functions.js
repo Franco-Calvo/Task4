@@ -24,7 +24,7 @@ export function newCardPast(list, element) {
 }
 export function fillCard(event) {
   return `<div class="card1">
-  <img src="${event.image}" alt="${event.alt}" class="card-img1">
+  <img src="${event.image}" alt="${event.name}" class="card-img1">
   <h5 class="festival-title">${event.name}</h5>
   <div class="text-container">
     <p>${event.description}</p>
@@ -37,7 +37,7 @@ export function fillCard(event) {
 }
 export function fillCardUp(event) {
   return `<div class="card1">
-  <img src="${event.image}" alt="" class="card-img1">
+  <img src="${event.image}" alt="${event.name}" class="card-img1">
   <h5 class="festival-title">${event.name}</h5>
   <div class="text-container">
     <p>${event.description}</p>
@@ -50,7 +50,7 @@ export function fillCardUp(event) {
 }
 export function fillCardPast(event) {
   return `<div class="card1">
-  <img src="${event.image}" alt="" class="card-img1">
+  <img src="${event.image}" alt="${event.name}" class="card-img1">
   <h5 class="festival-title">${event.name}</h5>
   <div class="text-container">
     <p>${event.description}</p>
